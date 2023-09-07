@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!------link to my styleSheet---------->
+    <link rel="stylesheet" href="./styles.css" />
+    <!---------link of cart icon----------->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <!----------script of jquery----------->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!------link for bootstrap ---------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!---------Here I will generate header dynamically------------>
+    <header id="header"></header>
+    <!-----------It is the main part of my home page
+      containing my homepage slogan and image is injected through css. 
+      --------->
+    <main>
+      <section
+        class="container-fluid main d-flex flex-column justify-content-center align-content-center text-warning"
+      >
+        <div class="my-3 text-capitalize">Eccomerce</div>
+        <span
+          >Clothes that talk on behalf of you.Something for every
+          occassion.</span
+        >
+      </section>
+      <section>
+        <div
+          class="d-flex justify-content-center mb-3 text-capitalize text-bg-warning p-3"
+        >
+          <h1 class="fs-1">feature products</h1>
+        </div>
+        <!-- corousel -->
+        <main>
+          <!-------largeScreen----------->
+          <div
+            id="carouselExampleInterval"
+            class="carousel slide d-none d-lg-block"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-2">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVucyUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Oxford Shirt</h5>
+                        <span class="text-bold">$5</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          It's made from 100% cotton
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVucyUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Denim Jacket</h5>
+                        <span class="text-bold">$98</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          This classic denim jacket
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWVucyUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark w-100 rounded">Jacket shirt</h5>
+                        <span class="text-bold">$56</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          Classic Men's Oxford Shirt
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1552252059-9d77e4059ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bWVucyUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Chinos</h5>
+                        <span class="text-bold">$5</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          These versatile chinos are perfec
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1618886614638-80e3c103d31a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1lbnMlMjBmYXNoaW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=700&q=60"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Sweatshirt</h5>
+                        <span class="text-bold">$76</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          This soft and cozy sweatshir
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-2">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQNr6gbkEFSzyuubOR9tYCVklkhDekBfQE46TGDL3qUZ4ImEY8pzyWBUpHty0z"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Printed T-Shirt</h5>
+                        <span class="text-bold">$89</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          This fun and stylish printed T-shirt is perfect for
+                          everyday wear.
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGGMWSIFeJiZ-praGeh4WBIKFKI1hLsFbQk4cCZL_AKj6nA8uu4WXgvdQmpDnq"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Denim Jeans</h5>
+                        <span class="text-bold">$455</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          These classic denim jeans are a must-have for any
+                          kid's wardrobe.
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRVDWDEL0b-uFh3pj9orQm2AG6-m2sHy-dxc4dh1JSElvyjbejz3c3arBfaU8S5"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Sweatshirt</h5>
+                        <span class="text-bold">$85</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          This soft and cozy sweatshirt is perfect for lounging
+                          around
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ6gh96wC3JfJhQ_xHV79dtMlMd49fKKLq0kooSu589ftbel9zAR9u2Qs7rnzt2"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded card-text">Dress</h5>
+                        <span class="text-bold">$12</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          This adorable dress is perfect for a special occasion.
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTMq0UVBIa6Mchznlgr8RH3QUxo2UB0bkDOl3yzVT8VleCnoY3ULZ9iO7Kahr3"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Shorts</h5>
+                        <span class="text-bold">$52</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          These comfortable and stylish shorts are perfect for
+                          summer
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleInterval"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!---------medium screen-------->
+          <div
+            id="carouselExampleControls"
+            class="carousel slide d-none d-md-block d-lg-none"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row justify-content-center">
+                  <div class="col-md-4">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQNr6gbkEFSzyuubOR9tYCVklkhDekBfQE46TGDL3qUZ4ImEY8pzyWBUpHty0z"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Printed T-Shirt</h5>
+                        <span class="text-bold">$89</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          This fun and stylish printed T-shirt is perfect for
+                          everyday wear.
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGGMWSIFeJiZ-praGeh4WBIKFKI1hLsFbQk4cCZL_AKj6nA8uu4WXgvdQmpDnq"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Denim Jeans</h5>
+                        <span class="text-bold">$455</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          These classic denim jeans are a must-have for any
+                          kid's wardrobe.
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center">
+                  <div class="col-md-4">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1617113930975-f9c7243ae527?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fG1lbnMlMjBmYXNoaW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=700&q=60"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">T-Shirt</h5>
+                        <span class="text-bold">$8</span>
+                        <p class="makingThingsFlex text-light">
+                          This comfortable and stylish t-shirt
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWVucyUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Oxford Shirt</h5>
+                        <span class="text-bold">$5</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          It's made from 100% cotton
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              role="button"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleControls"
+              role="button"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-----------------Smaller Screen--------------------->
+          <div
+            id="carouselExampleFade"
+            class="carousel slide carousel-fade d-block d-md-none"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <div class="row justify-content-center">
+                  <div class="col-6">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRVDWDEL0b-uFh3pj9orQm2AG6-m2sHy-dxc4dh1JSElvyjbejz3c3arBfaU8S5"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Sweatshirt</h5>
+                        <span class="text-bold">$85</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          This soft and cozy sweatshirt is perfect for lounging
+                          around
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="10000">
+                <div class="row justify-content-center">
+                  <div class="col-6">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVucyUyMGZhc2hpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=700&q=60"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Denim Jacket</h5>
+                        <span class="text-bold">$98</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          This classic denim jacket
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="10000">
+                <div class="row justify-content-center">
+                  <div class="col-6">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQNr6gbkEFSzyuubOR9tYCVklkhDekBfQE46TGDL3qUZ4ImEY8pzyWBUpHty0z"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Printed T-Shirt</h5>
+                        <span class="text-bold">$89</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          This fun and stylish printed T-shirt is perfect for
+                          everyday wear.
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="10000">
+                <div class="row justify-content-center">
+                  <div class="col-6">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSLaRyYuJD0Is8Vb816vg1viHj5TFP1Knhk61H5ugErO0cZ1fKfmtvnjcC93EmU"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Floral Print Dress</h5>
+                        <span class="text-bold">$55</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          This feminine floral print dress is perfect for a
+                          formal occasion
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="10000">
+                <div class="row justify-content-center">
+                  <div class="hover-card col-6 col-md-4 col-lg-2">
+                    <div
+                      id="${item.id}"
+                      class="card my-1 mb-3 d-flex flex-column justify-content-center border-bottom-0 border"
+                    >
+                      <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7VhAKQZfWz7HxUIi6NETYBIfatccjBiltLFyk5smxMkpbKPEOX7LECOALa-a9"
+                        class=" "
+                        height="200"
+                        width="fit-content"
+                      />
+                      <div
+                        class="makingHeadingCenterAlign card-body bg-secondary rounded-bottom-3"
+                      >
+                        <h5 class="text-bg-dark rounded">Sweater Dress</h5>
+                        <span class="text-bold">$55</span>
+                        <p class="makingThingsFlex text-light card-text">
+                          This cozy sweater dress is perfect for lounging
+                          around.
+                        </p>
+                        <button
+                          class="btn btn-warning d-flex justify-content-center align-align-items-center text-dark"
+                        >
+                          <span class="material-symbols-rounded"
+                            >shopping_cart</span
+                          >
+                          Add to cart
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </main>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+    <script>
+      $(function () {
+        $("#header").load("./reusableComponent/header.html", function () {
+          console.log("I am loaded");
+        });
+        $("#footer").load("./reusableComponent/footer.html", function () {
+          console.log("I am loaded too.");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-------Here header will be generated dynamically---->
+    <header id="header"></header>
+    <main class="cart my-5">
+      <div class="itemsInCart bg-secondary mb-5 mb-md-0">
+        <div class="border-bottom mb-2 text-light">
+          <h3 class="fw-bold">items In Cart</h3>
+        </div>
+        <div class="cart-body fs-5">
+          <div class="cart-img">
+            <img
+              width="150px"
+              height="170px"
+              class=" "
+              src="https://freepixel-prod.s3.amazonaws.com/thumb/free-photos-a-young-boy-happily-dressed-in-a-superman-costume-standing-and-smiling-brightly-he-is-wearing-a-blue-th-100309475.jpg"
+              alt=""
+            />
+          </div>
+          <div class="price text-light">
+            <div class="price-title fs-md-5">SuperMan dress</div>
+            <div class="price-num">$15</div>
+            <div class="delete">
+              <button class="btn btn-warning">
+                <span class="material-symbols-outlined"> delete </span>
+              </button>
+            </div>
+          </div>
+          <div class="cart-input">
+            <button class="btn btn-warning">-</button>
+            <input type="number" class="w-100 rounded-2 border-black" />
+            <button class="btn btn-warning">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="summary bg-secondary text-light">
+        <div class="sum-head border-bottom">
+          <h3 class="fw-bold">summary</h3>
+        </div>
+        <div class="cost dist-btw fs-5">
+          <p>cost</p>
+          <p>$25</p>
+        </div>
+        <div class="shopping dist-btw fs-5 border-bottom">
+          <p>shopping</p>
+          <p>$5</p>
+        </div>
+        <div class="total dist-btw fs-4 fw-bold">
+          <p>total</p>
+          <p>$30</p>
+        </div>
+        <button class="btn btn-warning">checkout</button>
+      </div>
+    </main>
+    <!----------Here footer will be generated dynamically-->
+    <footer id="footer"></footer>
+    <script>
+      $(function () {
+        $("#header").load("./reusableComponent/header.html", function () {
+          console.log("I am loaded");
+        });
+        $("#footer").load("./reusableComponent/footer.html");
+      });
+    </script>
+  </body>
+</html>
